@@ -1,25 +1,14 @@
 public class HelloApp7 {
-
     public static void main(String[] args) {
 
-        // If no arguments → default message
-        if (args.length == 0) {
-            System.out.println("Hello, World!");
-            return;
+        String names = "World";
+
+        // If arguments are provided, join them with ", "
+        if (args.length > 0) {
+            names = String.join(", ", args);
         }
 
-        // Build greeting string
-        String result = "Hello, ";
-
-        // Enhanced for loop to append names
-        for (String name : args) {
-            result += name + ", ";
-        }
-
-        // Remove trailing ", " using substring
-        result = result.substring(0, result.length() - 2);
-
-        // Print final output
-        System.out.println(result);
+        // Final output
+        System.out.println("Hello, " + names + "!");
     }
 }
